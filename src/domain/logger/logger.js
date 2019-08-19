@@ -1,6 +1,6 @@
 import * as config from '@/config/application-prop.js'
 
-const DEBUG_MODE = ngiConfig.LOGGER_DEBUG_MODE
+const DEBUG_MODE = config.LOGGER_DEBUG_MODE
 
 export default {
   logJSON: function (msg) {
@@ -11,25 +11,25 @@ export default {
   // error : it measn that you need to investigat the cause and fix it
   error: function (msg) {
     if (DEBUG_MODE) {
-      console.error('error:'+msg)
+      console.error('error:' + msg)
     }
   },
   // warn: it means that you need to confirm the cause but need not fix it
   warn: function (msg) {
     if (DEBUG_MODE) {
-      console.warn('warn :'+msg)
+      console.warn('warn :' + msg)
     }
   },
   // info: just information
   info: function (msg) {
     if (DEBUG_MODE) {
-      console.info('info :'+msg)
+      console.info('info :' + msg)
     }
   },
   // debug: it is only for your development
   trace: function (msg) {
     if (DEBUG_MODE) {
-      console.trace('debug:'+msg)
+      console.trace('debug:' + msg)
     }
   },
   // dump :dump object

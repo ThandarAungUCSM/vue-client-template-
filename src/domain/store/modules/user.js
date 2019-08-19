@@ -1,17 +1,22 @@
-import log from '@/dmain/logger/logger'
 const namespaced = true
 
 const state = {
-    name:''
+  name: ''
 }
 
 const getters = {
-    getName: state => state.name
+  getName: state => state.name
 }
 
-const mutation = {
-    login(state, payload){
-        state.name = payload.name
-    }
+const mutations = {
+  login (state, payload) {
+    state.name = payload.name
+  }
 }
 
+export default{
+  namespaced,
+  state,
+  getters,
+  mutations
+}
